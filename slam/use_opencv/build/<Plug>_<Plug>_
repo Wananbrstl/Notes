@@ -1,0 +1,24 @@
+#include <iostream>
+#include <opencv2/opencv.hpp>
+#include <opencv2/features2d.hpp>
+
+using namespace std;
+using namespace cv;
+
+int main(int argc, char const* argv[])
+{
+  Mat src = imread("../image/a.jpg", 0);
+  if(src.empty()){
+    cout << "src is empty ! " << endl;
+    return 1;
+  } 
+  vector<KeyPoint> keypoints;
+  Ptr<FastFeatureDetector> FASTdetect = FastFeatureDetector::create(40);
+  FASTdetect->detect(src, keypoints);
+  
+  Mat res;
+  drawKeypoints(src, keypoints, res, Scalar(255,0,0), DrawMatchesFlags::DRAW_OVER_OUTIMG);
+  imshow("result", src);
+  waitKey();
+  return 0;
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test_agin.dir/src/test_Souphus_agin.cpp.o  -o test_agin  -Wl,-rpath,/home/lbn/slam/Sophus/build /home/lbn/slam/Sophus/build/libSophus.so 

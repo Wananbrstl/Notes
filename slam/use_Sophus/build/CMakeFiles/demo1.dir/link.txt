@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/demo1.dir/src/test_tryUse.cpp.o  -o demo1  -Wl,-rpath,/home/lbn/slam/Sophus/build /home/lbn/slam/Sophus/build/libSophus.so 

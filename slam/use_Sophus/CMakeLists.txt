@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.8)
+project(useSophus)
+
+find_package( Sophus REQUIRED)
+include_directories( ${Sophus_INCLUDE_DIRS} )
+                      #"/usr/include/eigen3")
+
+# add_executable(useSophus src/.cpp)
+add_executable(demo1 src/test_tryUse.cpp)
+add_executable(test_agin src/test_Souphus_agin.cpp)
+add_executable(useSophus src/useSophus.cpp)
+# add_executable(testse3 src/uesse3.cpp)
+target_link_libraries( demo1 ${Sophus_LIBRARIES} )
+target_link_libraries( test_agin ${Sophus_LIBRARIES} )
+# target_link_libraries( testse3 ${Sophus_LIBRARIES} )
+target_link_libraries( useSophus ${Sophus_LIBRARIES} )
